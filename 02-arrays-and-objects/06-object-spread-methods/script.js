@@ -1,8 +1,32 @@
-const obj1 = { a: 1, b: 2 };
-const obj2 = { c: 3, d: 4 };
+const firstName = "Saurav";
+const lastName = "Verma";
+const age = 25;
 
-const obj3 = { ...obj1, ...obj2 };
-console.log(obj3);
+const person = {
+  firstName,
+  lastName,
+  age,
+};
 
-const obj4 = Object.assign({}, obj1, obj2, { e: 5, f: 6 });
-console.log(obj4);
+console.log(person);
+
+const todo = {
+  id: 1,
+  title: "Take out trash",
+  user: {
+    name: "Saurav",
+  },
+};
+
+const {
+  id,
+  title,
+  user: { name },
+} = todo;
+console.log(id, title, name);
+
+const numbes = [23, 45, 15, 89, 75];
+
+const [first, ...rest] = numbes;
+
+console.log(rest);
